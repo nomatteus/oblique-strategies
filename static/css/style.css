@@ -203,8 +203,8 @@ td { vertical-align: top; }
    Author: Matt Ruten
    ========================================================================== */
 body {
-  background: #000;
 }
+
 
 #oblique-strategy {
   text-align: center;
@@ -212,7 +212,7 @@ body {
   font-family: josefin sans;
   font-family: Raleway;
   font-family: Belleza;
-  font-size: 100px;
+  font-size: 40px;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.7);
   text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.3), 2px 2px 0px rgba(0, 0, 0, 0.2);
@@ -221,12 +221,73 @@ body {
 
 
 
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+  #strat-nav {
+    margin: 0;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(60, 60, 60, 0.1);
+    overflow: hidden;
+    background-image: linear-gradient(bottom, rgba(36,36,36,0.3) 11%, rgba(102,102,102,0.3) 56%, rgba(125,125,125,0.3) 78%);
+    background-image: -o-linear-gradient(bottom, rgba(36,36,36,0.3) 11%, rgba(102,102,102,0.3) 56%, rgba(125,125,125,0.3) 78%);
+    background-image: -moz-linear-gradient(bottom, rgba(36,36,36,0.3) 11%, rgba(102,102,102,0.3) 56%, rgba(125,125,125,0.3) 78%);
+    background-image: -webkit-linear-gradient(bottom, rgba(36,36,36,0.3) 11%, rgba(102,102,102,0.3) 56%, rgba(125,125,125,0.3) 78%);
+    background-image: -ms-linear-gradient(bottom, rgba(36,36,36,0.3) 11%, rgba(102,102,102,0.3) 56%, rgba(125,125,125,0.3) 78%);
+    background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0.11, rgba(36,36,36,0.3)),
+      color-stop(0.56, rgba(102,102,102,0.3)),
+      color-stop(0.78, rgba(125,125,125,0.3))
+      );
+  }
+    #strat-nav li {
+      display: block;
+      width: 33.333333333%;
+      float: left;
+      text-align: center;
+    }
+    #strat-nav li .inner {
+      border-radius: 2px;
+      border-right: 1px solid rgba(0, 0, 0, 0.3);
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    #strat-nav li .inner:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    #strat-nav li a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      font: normal 400 16px/22px "Cuprum", sans-serif;
+      color: white;
+      text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+    }
 
 
-
-
-
-
+.one-strategy {}
+  .one-strategy #oblique-strategy,
+  .one-strategy #strat-nav #fave {
+    display: block;
+  }
+  .one-strategy #faves,
+  .one-strategy #strat-nav #clear-faves {
+    display: none;
+  }
+.strategy-list {}
+  .strategy-list #faves,
+  .strategy-list #strat-nav #clear-faves {
+    display: block;
+  }
+  .strategy-list #oblique-strategy,
+  .strategy-list #strat-nav #fave {
+    display: none;
+  }
 
 
 
