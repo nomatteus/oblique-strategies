@@ -200,10 +200,23 @@ td { vertical-align: top; }
 
 
 /* ==|== primary styles =====================================================
-   Author:
+   Author: Matt Ruten
    ========================================================================== */
+body {
+  background: #000;
+}
 
-
+#oblique-strategy {
+  text-align: center;
+  font-family: Lora;
+  font-family: josefin sans;
+  font-family: Raleway;
+  font-family: Belleza;
+  font-size: 100px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.7);
+  text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.3), 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
 
 
 

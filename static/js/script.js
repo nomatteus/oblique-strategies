@@ -26,3 +26,12 @@ var ObliqueStrategies = function() {
 var obstrat = ObliqueStrategies();
 
 $("#oblique-strategy").text(obstrat.get_random());
+
+var randr = Math.floor((Math.random()*255)+1),
+    randg = Math.floor((Math.random()*255)+1),
+    randb = Math.floor((Math.random()*255)+1),
+    randa = Math.floor((Math.random()*9)+1)/10,
+    rand_rgba = "rgba(" + randr + ", " + randg + ", " + randb + ", " + randa + ")";
+
+$("body").css("background", rand_rgba);
+
