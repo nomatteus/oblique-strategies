@@ -249,9 +249,12 @@ footer {
   }
     #strat-nav li {
       display: block;
-      width: 33.333333333%;
+      width: 33%;
       float: left;
       text-align: center;
+    }
+    #strat-nav li.mid {
+      width: 34%;
     }
     #strat-nav li .inner {
       border-radius: 2px;
