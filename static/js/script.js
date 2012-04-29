@@ -101,6 +101,9 @@ ObliqueStrategies = function() {
     $("#strat-nav #about a").live("click", function(){
       $about.show();
     });
+    $("#about-content .close").live("click", function(){
+      $about.hide();
+    });
   };
   init();
   return {

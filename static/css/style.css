@@ -247,6 +247,14 @@ body {
 #about-content a {
   color: white;
 }
+#about-content a.close {
+  float: right;
+  text-decoration: none;
+}
+#about-content a.close .icon {
+  font-family: IconicFill;
+  margin-right: 5px;
+}
 
 ul#faves {
   width: 100%;
@@ -305,7 +313,7 @@ footer {
       background: rgba(255, 255, 255, 0.1);
     }
     #strat-nav li a {
-      display: inline-block;
+      display: block;
       padding: 10px 0;
       text-decoration: none;
       font: normal 400 16px/21px "Cuprum", sans-serif;
