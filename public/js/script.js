@@ -98,9 +98,12 @@ ObliqueStrategies = function() {
       $about.hide();
     });
     $("#strat-nav #clear-faves a").live("click", function(){
-      clear_faves();
-      populate_faves();
-      $about.hide();
+      var confirmed = confirm('Are you sure you want to clear your faves?');
+      if(confirmed) {
+        clear_faves();
+        populate_faves();
+        $about.hide();
+      }
     });
     $("#strat-nav #about a").live("click", function(){
       $about.show();
