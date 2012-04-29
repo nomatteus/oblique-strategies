@@ -214,7 +214,8 @@ body {
 
 #oblique-strategy {
   position: absolute;
-  width: 100%;
+  width: 90%;
+  padding: 0 5%;
   top: 25%;
   text-align: center;
   font-family: Lora;
@@ -258,12 +259,12 @@ footer {
   }
     #strat-nav li {
       display: block;
-      width: 33%;
+      width: 31%;
       float: left;
       text-align: center;
     }
-    #strat-nav li.mid {
-      width: 34%;
+    #strat-nav li#about {
+      width: 7%;
     }
     #strat-nav li .inner {
       border-radius: 2px;
@@ -274,13 +275,21 @@ footer {
       background: rgba(255, 255, 255, 0.1);
     }
     #strat-nav li a {
-      display: block;
-      padding: 10px;
+      display: inline-block;
+      padding: 10px 0;
       text-decoration: none;
-      font: normal 400 16px/22px "Cuprum", sans-serif;
+      font: normal 400 16px/16px "Cuprum", sans-serif;
       color: white;
       text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
       -webkit-tap-highlight-color: rgba(0,0,0,0);
+    }
+    #strat-nav li a span {
+      font-family: IconicFill;
+      margin-right: 5px;
+    }
+    #strat-nav li#about a span {
+      margin-right: 0;
+      margin-left: 3px;
     }
 
 
