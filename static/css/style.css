@@ -204,9 +204,18 @@ td { vertical-align: top; }
    ========================================================================== */
 body {
 }
-
+#container {
+  position: absolute;
+  top: 0;
+  bottom: 42px;
+  left: 0;
+  right: 0;
+}
 
 #oblique-strategy {
+  position: absolute;
+  width: 100%;
+  top: 25%;
   text-align: center;
   font-family: Lora;
   font-family: josefin sans;
