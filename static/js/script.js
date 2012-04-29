@@ -73,7 +73,7 @@ ObliqueStrategies = function() {
         flength = faves.length;
     $faves.html(""); // Clear any HTML
     if (flength === 0) {
-      $faves.html("No faves yet. Why don't you add some?");
+      $faves.html("<li>No faves yet. Why don't you add some?</li>");
     }
     for (var i=0; i < flength; i++) {
       $faves.append("<li>" + faves[i] + "</li>");
