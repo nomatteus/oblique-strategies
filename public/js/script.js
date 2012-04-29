@@ -85,18 +85,22 @@ ObliqueStrategies = function() {
       $("body").addClass("one-strategy");
       $("body").removeClass("strategy-list");
       display_random();
+      $about.hide();
     });
     $("#strat-nav #fave a").live("click", function(){
       add_fave();
+      $about.hide();
     });
     $("#strat-nav #view-faves a").live("click", function(){
       $("body").addClass("strategy-list");
       $("body").removeClass("one-strategy");
       populate_faves();
+      $about.hide();
     });
     $("#strat-nav #clear-faves a").live("click", function(){
       clear_faves();
       populate_faves();
+      $about.hide();
     });
     $("#strat-nav #about a").live("click", function(){
       $about.show();
