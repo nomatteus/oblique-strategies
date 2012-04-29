@@ -1,2 +1,3 @@
-rack-contrib
-rack-rewrite
+source 'https://rubygems.org'
+gem "rack-contrib"
+gem "rack-rewrite"
