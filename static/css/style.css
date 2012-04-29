@@ -248,8 +248,11 @@ body {
   color: white;
 }
 #about-content a.close {
-  float: right;
   text-decoration: none;
+  position: fixed;
+  top: 25px;
+  right: 40px;
+  display: block;
 }
 #about-content a.close .icon {
   font-family: IconicFill;
