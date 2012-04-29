@@ -253,6 +253,10 @@ body {
   top: 25px;
   right: 40px;
   display: block;
+  background-color: rgba(0,0,0,0.8);
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(255,255,255,0.3);
 }
 #about-content a.close .icon {
   font-family: IconicFill;
@@ -306,6 +310,9 @@ footer {
     }
     #strat-nav li#about {
       width: 7%;
+    }
+    #strat-nav li#clear-faves {
+      display:none;
     }
     #strat-nav li .inner {
       border-radius: 2px;
