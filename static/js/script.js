@@ -17,6 +17,7 @@ ObliqueStrategies = function() {
       $container = $("#container"),
       $obstrat = $("#oblique-strategy"),
       $faves = $("ul#faves"),
+      $about = $("#about-content"),
   init = function() {
       addListeners();
       display_random();
@@ -96,6 +97,9 @@ ObliqueStrategies = function() {
     $("#strat-nav #clear-faves a").live("click", function(){
       clear_faves();
       populate_faves();
+    });
+    $("#strat-nav #about a").live("click", function(){
+      $about.show();
     });
   };
   init();
