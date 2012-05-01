@@ -1,0 +1,37 @@
+# References:
+# http://help.github.com/deploy-with-capistrano/
+# http://docs.webfaction.com/software/rails.html?highlight=capistrano#deploying-a-ruby-on-rails-application-with-capistrano
+
+set :application, "app-name"
+set :repository,  "git@github.com:username/repo-name.git"
+
+set :scm, "git"
+
+role :web, "webxxx.webfaction.com"                          # Your HTTP server, Apache/etc
+role :app, "webxxx.webfaction.com"                          # This may be the same as your `Web` server
+role :db,  "webxxx.webfaction.com", :primary => true # This is where Rails migrations will run
+
+set :deploy_to, "/home/username/webapps/appname"
+
+set :user, "username"
+#set :scm_username, "gitname"
+set :use_sudo, false
+default_run_options[:pty] = true
+ssh_options[:forward_agent] = true
+
+after "deploy:restart", "deploy:cleanup"
+
+# These are all empty because this is a static HTML app, nothing fancy
+namespace:deploy do
+  task:start do
+  end
+  task:stop do
+  end
+  task:finalize_update do
+  end
+  task:restart do
+  end
+  after "deploy:restart" do
+    # Post-deploy Tasks go here
+  end
+end

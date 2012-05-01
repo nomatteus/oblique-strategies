@@ -1,2 +1,3 @@
 .rvmrc
 assets
+config/deploy.rb
