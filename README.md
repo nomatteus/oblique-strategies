@@ -6,7 +6,7 @@ This is a mobile web app, so try visiting it from your mobile device, if you hav
 How to Run
 ----------
 
-Open `public/index.html` in your browser. That's it~
+Open `public/index.html` in your browser. That's it!
 
 Tech
 ----
