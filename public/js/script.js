@@ -35,6 +35,9 @@ ObliqueStrategies = function() {
       if (!Helpers.localStorageSupported) {
         $("body").addClass("nolocalstorage");
       }
+      if ('ontouchstart' in document) {
+        $("body").removeClass('no-touch');
+      }
   },
   center_strategy = function() {
     var container_height = $container.height(),
@@ -85,6 +88,13 @@ ObliqueStrategies = function() {
     }
   },
   addListeners = function() {
+    // "Hover" for touch devices
+    $("#strat-nav li").bind("touchstart", function(){
+      $(this).addClass("active");
+    });
+    $("#strat-nav li").bind("touchend", function(){
+      $(this).removeClass("active");
+    });
     $("#strat-nav #random a").live("click", function(){
       $("body").addClass("one-strategy");
       $("body").removeClass("strategy-list");

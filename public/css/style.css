@@ -320,7 +320,9 @@ footer {
       border-right: 1px solid rgba(0, 0, 0, 0.3);
       border-left: 1px solid rgba(255, 255, 255, 0.1);
     }
-    #strat-nav li .inner:hover {
+    /* :hover is unpredictable on mobile safari http://goo.gl/D2YrL */
+    .no-touch #strat-nav li .inner:hover,
+    #strat-nav li.active .inner { /* for iOS */
       background: rgba(255, 255, 255, 0.1);
     }
     #strat-nav li a {
