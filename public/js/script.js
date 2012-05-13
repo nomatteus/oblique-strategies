@@ -38,6 +38,15 @@ ObliqueStrategies = function() {
       if ('ontouchstart' in document) {
         $("body").removeClass('no-touch');
       }
+      set_ios_title();
+  },
+  set_ios_title = function() { /* Set's short <title> for iOS to be used as "app name" when web app added to home screen. */
+    var nav = navigator,
+    isIDevice = 'platform' in nav && (/iphone|ipod|ipad/gi).test(nav.platform),
+    $title = $("title");
+    if (isIDevice) {
+      $title.text($title.data("ios-title"));
+    }
   },
   center_strategy = function() {
     var container_height = $container.height(),
@@ -514,4 +523,3 @@ var addToHome = (function (w) {
     reset: reset
   };
 })(this);
-
