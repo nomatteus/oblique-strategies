@@ -54,12 +54,21 @@ ObliqueStrategies = function() {
     }
     // Save updated list in local storage
     obstrat = localStorage.setItem('oblique_strategies_faves', JSON.stringify(faves));
+    fave_color_icon();
   },
   get_faves = function() {
     return JSON.parse(localStorage.getItem('oblique_strategies_faves')) || [];
   },
   clear_faves = function() {
     localStorage.removeItem('oblique_strategies_faves');
+  },
+  fave_color_icon = function() { /* Colors the icon if this strategy is in user's fave list */
+    var faves = get_faves();
+    if (Helpers.item_is_in_array(current_strategy, faves)) {
+      $("#fave").addClass("is-user-fave");
+    } else {
+      $("#fave").removeClass("is-user-fave");
+    }
   },
   random_strategy = function() {
     var rand_strategy_index = Math.floor(Math.random()*num_strategies);
@@ -75,6 +84,7 @@ ObliqueStrategies = function() {
     random_font();
     center_strategy();
     Display.random_bg();
+    fave_color_icon();
   },
   populate_faves = function() {
     var faves = get_faves(),

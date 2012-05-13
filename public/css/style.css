@@ -334,9 +334,12 @@ footer {
       text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
       -webkit-tap-highlight-color: rgba(0,0,0,0);
     }
-    #strat-nav li a span {
+    #strat-nav li a .icon {
       font-family: IconicFill;
       margin-right: 5px;
+    }
+    #strat-nav #fave.is-user-fave a .icon {
+      color: #e0fa62;
     }
     #strat-nav li#about a span {
       margin-right: 0;
