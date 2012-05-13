@@ -361,7 +361,11 @@ footer {
     display: none;
   }
 
-
+/* Hide "fave" functionality from browsers that don't support localstorage */
+.nolocalstorage #strat-nav #fave, 
+.nolocalstorage #strat-nav #clear-faves, 
+.nolocalstorage #strat-nav #view-faves {display:none;} 
+.nolocalstorage #strat-nav #random {width:93%;}
 
 
 /*

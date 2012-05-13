@@ -7,6 +7,15 @@ var Helpers = {
       }
     }
     return false;
+  },
+  // Check if browser supporst localStorage
+  // Taken from Modernizr: http://goo.gl/VwVXE
+  localStorageSupported: function() {
+    try {
+      return !!localStorage.getItem;
+    } catch(e) {
+      return false;
+    }
   }
 },
 ObliqueStrategies = function() {
@@ -23,6 +32,9 @@ ObliqueStrategies = function() {
       display_random();
       $("body").addClass("one-strategy");
       Display.random_bg();
+      if (!Helpers.localStorageSupported) {
+        $("body").addClass("nolocalstorage");
+      }
   },
   center_strategy = function() {
     var container_height = $container.height(),
@@ -32,27 +44,19 @@ ObliqueStrategies = function() {
   },
   add_fave = function() {
     // Add strategy to local store list
-    if (Modernizr.localstorage) {
-      var faves = get_faves();
-      // Add current strategy to faves list
-      if (!Helpers.item_is_in_array(current_strategy, faves)) {
-        faves.push(current_strategy);
-      }
-      // Save updated list in local storage
-      obstrat = localStorage.setItem('oblique_strategies_faves', JSON.stringify(faves));
+    var faves = get_faves();
+    // Add current strategy to faves list
+    if (!Helpers.item_is_in_array(current_strategy, faves)) {
+      faves.push(current_strategy);
     }
-    console.log("called faves... localStorage item `oblique_strategies_faves` is now: ");
-    console.log(localStorage.getItem('oblique_strategies_faves'));
+    // Save updated list in local storage
+    obstrat = localStorage.setItem('oblique_strategies_faves', JSON.stringify(faves));
   },
   get_faves = function() {
-    console.log("get faves... localStorage item `oblique_strategies_faves` is: ");
-    console.log(localStorage.getItem('oblique_strategies_faves'));
     return JSON.parse(localStorage.getItem('oblique_strategies_faves')) || [];
   },
   clear_faves = function() {
     localStorage.removeItem('oblique_strategies_faves');
-    console.log("clearing faves... localStorage item `oblique_strategies_faves` is now: ");
-    console.log(localStorage.getItem('oblique_strategies_faves'));
   },
   random_strategy = function() {
     var rand_strategy_index = Math.floor(Math.random()*num_strategies);
