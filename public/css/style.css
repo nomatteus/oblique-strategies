@@ -243,7 +243,7 @@ body {
   color: white;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
-  font-family: "Open Sans";
+  font-family: "OpenSansRegular";
 }
 #about-content a {
   color: white;

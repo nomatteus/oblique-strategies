@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Cache manifest version 0.0.17
+# Cache manifest version 0.0.19
 CACHE:
 css/style.css
 css/fonts/fonts.css
@@ -31,6 +31,10 @@ css/fonts/raleway_thin-webfont.eot
 css/fonts/raleway_thin-webfont.svg
 css/fonts/raleway_thin-webfont.ttf
 css/fonts/raleway_thin-webfont.woff
+css/fonts/OpenSans-Regular-webfont.eot
+css/fonts/OpenSans-Regular-webfont.svg
+css/fonts/OpenSans-Regular-webfont.ttf
+css/fonts/OpenSans-Regular-webfont.woff
 img/startup-retina.png
 img/startup-tablet-landscape.png
 img/startup-tablet-portrait.png

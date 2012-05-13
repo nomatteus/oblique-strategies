@@ -56,6 +56,6 @@ TO DO:
 
 * ~~Set caching headers so that the app can run without a network connection (be inspired in the subway!)~~
 * ~~Finish creating the various mobile app start screens~~
-* Add bookmark bubble plugin to promote adding app to the homescreen on mobile devices
+* ~~Add bookmark bubble plugin to promote adding app to the homescreen on mobile devices~~
 * ~~Add feedback to show when a strategy is faved (i.e. change star to be yellow?)~~
 * ~~Hide fave functionality when using browser that doesn't support localStorage~~
