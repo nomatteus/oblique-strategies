@@ -14,6 +14,7 @@ Tech
 * [HTML5 Mobile Boilerplate](http://html5boilerplate.com/mobile) saves you a ton of work by gathering all the different `meta` tags, icons for your web apps, CSS reset/defaults all in one place.
 * Random fonts from [Google Web Fonts](http://www.google.com/webfonts).
 * Faves stored using HTML5 localStorage
+* Uses HTML5 application cache to allow the app to work offline
 
 #### Where's the good stuff?
 
