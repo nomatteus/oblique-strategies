@@ -119,19 +119,16 @@ ObliqueStrategies = function() {
       $("body").removeClass("strategy-list");
       display_random();
       $about.hide();
-      window.fathom && window.fathom.trackGoal('YSNLL0TF', 0);
     });
     $("#strat-nav #fave a").live("click", function(){
       add_fave();
       $about.hide();
-      window.fathom && window.fathom.trackGoal('EGPE1KA0', 0);
     });
     $("#strat-nav #view-faves a").live("click", function(){
       $("body").addClass("strategy-list");
       $("body").removeClass("one-strategy");
       populate_faves();
       $about.hide();
-      window.fathom && window.fathom.trackGoal('4NZCRIAG', 0);
     });
     $("#strat-nav #clear-faves a").live("click", function(){
       var confirmed = confirm('Are you sure you want to clear your faves?');
@@ -140,15 +137,12 @@ ObliqueStrategies = function() {
         populate_faves();
         $about.hide();
       }
-      window.fathom && window.fathom.trackGoal('DTAMFUAX', 0);
     });
     $("#strat-nav #about a").live("click", function(){
       $about.show();
-      window.fathom && window.fathom.trackGoal('M0BKDFRC', 0);
     });
     $("#about-content .close").live("click", function(){
       $about.hide();
-      window.fathom && window.fathom.trackGoal('ECQTPBSN', 0);
     });
   };
   init();
